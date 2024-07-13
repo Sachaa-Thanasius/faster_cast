@@ -6,7 +6,9 @@ An attempt at making Python's `typing.cast <https://docs.python.org/3/library/ty
 
 Random Benchmark
 ---------------
-Calculated by running ``python benchmark.py`` on Windows 10 (WSL) with python3.9:::
+Calculated by running ``python benchmark.py`` on Windows 10 (WSL):
+
+Python3.9:::
 
     python version: 3.9
     ---- Testing with type: list[int] ----
@@ -23,3 +25,21 @@ Calculated by running ``python benchmark.py`` on Windows 10 (WSL) with python3.9
     typing.cast:     3.4441693799999484
     fastercast.cast: 1.911562644996593
     no cast:         1.4730412349999824
+
+Python3.12:::
+
+    python version: 3.12
+    ---- Testing with type: list[int] ----
+    typing.cast:     2.055564497000887
+    fastercast.cast: 1.6092367970013584
+    no cast:         1.2532094990019687
+
+    ---- Testing with type: <class 'list'> ----
+    typing.cast:     2.024937296999269
+    fastercast.cast: 1.5830607969983248
+    no cast:         1.211318797999411
+
+    ---- Testing with type: 'list' ----
+    typing.cast:     2.0198574959977122
+    fastercast.cast: 1.578529697999329
+    no cast:         1.2222721979997004
