@@ -6,3 +6,6 @@ build-backend = "setuptools.build_meta"
 name = "fastercast"
 version = "0.0.1"
 authors = [{name="Sachaa-Thanasius", email = "111999343+Sachaa-Thanasius@users.noreply.github.com"}]
+
+[tool.ruff]
+line-length = 120
