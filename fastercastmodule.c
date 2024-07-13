@@ -12,12 +12,12 @@ fastercast_cast(PyObject *self, PyObject *const *args, Py_ssize_t nargs)
 {
     if (nargs > 2)
     {
-        PyErr_SetString(PyExc_TypeError, "Extra positional arguments provided");
+        PyErr_Format(PyExc_TypeError, "cast() takes 2 positional arguments but %zd were given", nargs);
         return NULL;
     }
     else if (nargs < 2)
     {
-        PyErr_Format(PyExc_TypeError, "Missing %zd required arguments", 2 - nargs);
+        PyErr_Format(PyExc_TypeError, "cast() missing %zd required argument(s)", 2 - nargs);
         return NULL;
     }
     PyObject *val = args[1];
