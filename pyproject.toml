@@ -1,0 +1,8 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastercast"
+version = "0.0.1"
+authors = [{name="Sachaa-Thanasius", email = "111999343+Sachaa-Thanasius@users.noreply.github.com"}]
