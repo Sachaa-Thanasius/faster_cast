@@ -10,14 +10,7 @@ PyDoc_STRVAR(fastercast_cast__doc__,
 static PyObject *
 fastercast_cast(PyObject *self, PyObject *const *args, Py_ssize_t nargs)
 {
-    if (nargs > 2)
-    {
-        PyErr_Format(PyExc_TypeError, "cast() takes 2 positional arguments but %zd were given", nargs);
-        return NULL;
-    }
-    else if (nargs < 2)
-    {
-        PyErr_Format(PyExc_TypeError, "cast() missing %zd required argument(s)", 2 - nargs);
+    if (!_PyArg_CheckPositional("cast", nargs, 2, 2)){
         return NULL;
     }
     PyObject *val = args[1];
