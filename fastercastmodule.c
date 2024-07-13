@@ -26,7 +26,7 @@ fastercast_cast(PyObject *self, PyObject *const *args, Py_ssize_t nargs)
 }
 
 static PyMethodDef fastercast_methods[] = {
-    {"cast", _PyCFunction_CAST(fastercast_cast), METH_FASTCALL, fastercast_cast__doc__},
+    {"cast", (PyCFunction)fastercast_cast, METH_FASTCALL, fastercast_cast__doc__},
     {NULL, NULL, 0, NULL} // Sentinel
 };
 

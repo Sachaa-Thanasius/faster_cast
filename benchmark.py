@@ -1,3 +1,4 @@
+import sys
 import timeit
 from functools import partial
 
@@ -20,6 +21,8 @@ def main():
 
     iterations = 50_000
     test_types = [list[int], list, "list"]
+
+    print(f"python version: {'.'.join(map(str, sys.version_info[:2]))}")
     for typ in test_types:
         print(f"---- Testing with type: {typ!r} ----")
         print("typing.cast:    ", timeit.timeit(partial(test_func, typ, tpcast), number=iterations))
